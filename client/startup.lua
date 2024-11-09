@@ -11,7 +11,7 @@ local function downloadAndRun(url, filename)
     end
 end
 
-local url = "https://raw.githubusercontent.com/username/repository/branch/filename.lua"
+local url = "https://raw.githubusercontent.com/qubered/baseCommand/refs/heads/main/client/wrapper.lua?token=GHSAT0AAAAAACZ76NZFNJPUFEJZXBNEKMSGZZO5HLA"
 local filename = "wrapper.lua"
 
 downloadAndRun(url, filename)
