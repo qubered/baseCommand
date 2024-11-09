@@ -1,6 +1,6 @@
 local uuidFilePath = "UUID"
 local appScriptPath = "app.lua"
-local registerUrl = "https://mcapi.home.qubered.com/register"
+local registerUrl = "http://192.168.23.155:8081/register"
 
 -- Function to get the computer's cc:tweaked ID
 local function getComputerID()
