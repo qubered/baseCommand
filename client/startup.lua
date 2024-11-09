@@ -1,17 +1,25 @@
-local function downloadAndRun(url, filename)
+local url = "https://raw.githubusercontent.com/qubered/baseCommand/refs/heads/main/client/wrapper.lua"
+local path = "wrapper.lua"
+
+-- Function to download the file
+local function downloadFile(url, path)
     local response = http.get(url)
     if response then
-        local file = fs.open(filename, "w")
-        file.write(response.readAll())
-        file.close()
+        local content = response.readAll()
         response.close()
-        shell.run(filename)
+        
+        local file = fs.open(path, "w")
+        file.write(content)
+        file.close()
+        
+        print("Downloaded " .. path)
     else
-        print("Failed to download file.")
+        print("Failed to download " .. url)
     end
 end
 
-local url = "https://raw.githubusercontent.com/qubered/baseCommand/refs/heads/main/client/wrapper.lua"
-local filename = "wrapper.lua"
+-- Download the file
+downloadFile(url, path)
 
-downloadAndRun(url, filename)
+-- Run the downloaded file
+shell.run(path)
