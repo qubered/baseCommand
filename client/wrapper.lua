@@ -1,7 +1,3 @@
-local fs = require("fs")
-local http = require("http")
-local textutils = require("textutils")
-
 local uuidFilePath = "UUID"
 local appScriptPath = "app.lua"
 local registerUrl = "https://mcapi.home.qubered.com/register"
